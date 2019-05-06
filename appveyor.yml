@@ -6,7 +6,7 @@ artifacts:
   - path: MossApp\bin\Debug\MossApp.exe
     name: MossApp
 deploy:
-  #release: MossApp-$(appveyor_repo_tag_name)
+  release: MossApp-$(appveyor_repo_tag_name)
   description: 'MossApp $(appveyor_repo_tag_name) has been released.'
   provider: GitHub
   auth_token:
