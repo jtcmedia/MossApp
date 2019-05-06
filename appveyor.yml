@@ -7,7 +7,7 @@ deploy:
   description: 'GUI for Moss'
   provider: GitHub
   auth_token:
-    secure: 4706741cd28a672d20547482734a49ee637b8876
+    secure: s1IEmaaYPxsqkxivyhxf/ysmYQGg+JL3iBqzjeHwa06txM7is/kG5yR8iVZUvkiZ
   artifact: /.*\.exe/            # upload all NuGet packages to release assets
   draft: false
   prerelease: false
