@@ -2,13 +2,16 @@ version: 1.0.{build}
 image: Visual Studio 2017
 build:
   verbosity: minimal
+artifacts:
+  - path: MossApp\bin\Debug\MossApp.exe
+    name: MossApp
 deploy:
-  release: MossApp-v$(appveyor_build_version)
-  description: 'MossApp $(appveyor_build_version) has been released.'
+  release: MossApp-v$(appveyor_repo_tag_name)
+  description: 'MossApp has been released.'
   provider: GitHub
   auth_token:
     secure: s1IEmaaYPxsqkxivyhxf/ysmYQGg+JL3iBqzjeHwa06txM7is/kG5yR8iVZUvkiZ
-  artifact: MossApp\bin\Debug\MossApp.exe
+  artifact: MossApp
   draft: false
   prerelease: false
   tag: $(APPVEYOR_REPO_TAG_NAME)
