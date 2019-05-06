@@ -1,0 +1,16 @@
+version: 1.0.{build}
+image: Visual Studio 2017
+build:
+  verbosity: minimal
+deploy:
+  release: MossApp-v$(appveyor_build_version)
+  description: 'GUI for Moss'
+  provider: GitHub
+  auth_token:
+    secure: 4706741cd28a672d20547482734a49ee637b8876
+  artifact: /.*\.exe/            # upload all NuGet packages to release assets
+  draft: false
+  prerelease: false
+  on:
+    branch: master                 # release from master branch only
+    APPVEYOR_REPO_TAG: true        # deploy on tag push only
