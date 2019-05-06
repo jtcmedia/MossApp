@@ -11,7 +11,7 @@ deploy:
   artifact: MossApp\bin\Debug\MossApp.exe
   draft: false
   prerelease: false
-  tag: $(APPVEYOR_BUILD_VERSION)
+  tag: $(APPVEYOR_REPO_TAG_NAME)
   on:
     branch: master                 # release from master branch only
     APPVEYOR_REPO_TAG: true        # deploy on tag push only
