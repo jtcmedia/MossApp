@@ -8,7 +8,7 @@ deploy:
   provider: GitHub
   auth_token:
     secure: s1IEmaaYPxsqkxivyhxf/ysmYQGg+JL3iBqzjeHwa06txM7is/kG5yR8iVZUvkiZ
-  artifact: /.*\.exe/            # upload all NuGet packages to release assets
+  artifact: Debug\MossApp.exe
   draft: false
   prerelease: false
   on:
